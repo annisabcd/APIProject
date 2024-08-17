@@ -1,0 +1,157 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-08-17T15:21:19.667Z",
+    "end": "2024-08-17T15:21:22.545Z",
+    "duration": 2878,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "174423ba-0c1f-45e0-8667-60b8049c2d0c",
+      "title": "",
+      "fullFile": "C:\\Users\\annis\\APIProject\\test\\test-porto.js",
+      "file": "\\test\\test-porto.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ac6b0f37-0ae9-404d-ae85-8ce49880d6a1",
+          "title": "API Test for \"reqres.in\"",
+          "fullFile": "C:\\Users\\annis\\APIProject\\test\\test-porto.js",
+          "file": "\\test\\test-porto.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Test - GET Single User",
+              "fullTitle": "API Test for \"reqres.in\" Test - GET Single User",
+              "timedOut": false,
+              "duration": 299,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await request(BASE_URL)\n    .get(\"users/2\");\n      \n    console.log('Status Code:', response.statusCode);\n    \n// assertion\nassert.equal(response.body.data.first_name, \"Janet\")\nassert.equal(response.body.data.last_name, \"Weaver\")\nshould(response.statusCode === 200)\nconst schemaPath = \"resources/jsonSchema/get-user.json\"\nconst jsonSchema = JSON.parse(fs.readFileSync(schemaPath, 'utf8'))\nassert.jsonSchema(response.body, jsonSchema);",
+              "err": {},
+              "uuid": "61ed419b-2a63-421d-80a5-ed94930230f3",
+              "parentUUID": "ac6b0f37-0ae9-404d-ae85-8ce49880d6a1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Test - POST Create",
+              "fullTitle": "API Test for \"reqres.in\" Test - POST Create",
+              "timedOut": false,
+              "duration": 793,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const body = {\n    \"name\": \"morpheus\",\n    \"job\": \"leader\"\n}\n\nconst response = await request(BASE_URL)\n.post(\"users\")\n.send(body)\n\nconsole.log(response.statusCode);\nconsole.log(response.body)\n// assertion\nshould(response.statusCode === 201)\nconst schemaPath = \"resources/jsonSchema/post-user.json\"\nconst jsonSchema = JSON.parse(fs.readFileSync(schemaPath, 'utf8'))\nassert.jsonSchema(response.body, jsonSchema)",
+              "err": {},
+              "uuid": "2a1c13fb-dbba-450a-bcb9-9407174a33bc",
+              "parentUUID": "ac6b0f37-0ae9-404d-ae85-8ce49880d6a1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Test - PUT Update ",
+              "fullTitle": "API Test for \"reqres.in\" Test - PUT Update ",
+              "timedOut": false,
+              "duration": 707,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const body = {\n    \"name\": \"morpheus\",\n    \"job\": \"zion resident\"\n}\n const response = await request(BASE_URL)\n .put(\"users/2\")\n .send(body)\n console.log(response.statusCode);\n console.log(response.body)\n \n // assertion\n should(response.statusCode === 200)\n \n const schemaPath = \"resources/jsonSchema/put-user.json\"\n const jsonSchema = JSON.parse(fs.readFileSync(schemaPath, 'utf8'))\n assert.jsonSchema(response.body, jsonSchema)",
+              "err": {},
+              "uuid": "f0175d09-c9e3-4098-a64d-a2c6b688c42a",
+              "parentUUID": "ac6b0f37-0ae9-404d-ae85-8ce49880d6a1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Test - DELETE User",
+              "fullTitle": "API Test for \"reqres.in\" Test - DELETE User",
+              "timedOut": false,
+              "duration": 1067,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await request(BASE_URL)\n.delete(\"users/1\") \n    \nconsole.log(response.statusCode);\n   \n// assertion\nshould(response.statusCode === 204)\n    \nconst schemaPath = \"resources/jsonSchema/delete-user.json\"\nconst jsonSchema = JSON.parse(fs.readFileSync(schemaPath, 'utf8'))\nassert.jsonSchema(response.body, jsonSchema)",
+              "err": {},
+              "uuid": "1efd4fcb-c51b-4175-8ac4-89ccd26b644e",
+              "parentUUID": "ac6b0f37-0ae9-404d-ae85-8ce49880d6a1",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "61ed419b-2a63-421d-80a5-ed94930230f3",
+            "2a1c13fb-dbba-450a-bcb9-9407174a33bc",
+            "f0175d09-c9e3-4098-a64d-a2c6b688c42a",
+            "1efd4fcb-c51b-4175-8ac4-89ccd26b644e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2866,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 5000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 5000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.7.3"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}

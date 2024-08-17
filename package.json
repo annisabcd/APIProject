@@ -1,0 +1,23 @@
+{
+  "name": "apiproject",
+  "version": "1.0.0",
+  "description": "Portofolio of Supertest, Mocha, Mochawesome and Chai",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.3.10",
+    "chai-json-schema": "^1.5.1",
+    "mocha": "^10.7.3",
+    "mochawesome": "^7.1.3",
+    "mochawesome-report-generator": "^6.2.0",
+    "supertest": "^7.0.0"
+  }
+}
